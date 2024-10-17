@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Python') {
+            agent {
+                docker {
+                    image 'python'
+                }
+            }
+            steps {
+                sh 'echo "Pulling python image from docker"'
+                sh 'python --version'
+            }
+        }
+    }
+}
