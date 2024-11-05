@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Python') {
+            agent {
+                docker {
+                    image 'Random'
+                }
+            }
+            steps {
+                sh 'echo "Pulling Own image from docker"'
+            }
+        }
+    }
+}
