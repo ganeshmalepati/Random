@@ -5,7 +5,7 @@ pipeline {
         stage('Python') {
             agent {
                 docker {
-                    image 'Random'
+                    image 'rand.py'
                 }
             }
             steps {
